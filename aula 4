@@ -1,0 +1,46 @@
+insert into usuario (nome,email,senha,obs) values ("Josevaldo", "jose@valdo.com", "minha senha é josevaldo123", "uhsuhs")
+
+insert into usuario (nome,email,senha,obs) values ("antonieta", "antoni@eta.com", "minha senha é antonieta123", "nada")
+
+insert into usuario (nome,email,senha,obs) values ("Jovescleidson", "nome@estranho.com", "minha senha é estranho", "xxx")
+
+insert into usuario (nome,email,senha) values ("cleitinho", "saveiro@som.com", "minha senha é tumtumtum")
+
+select * from usuario
+where
+id=2
+
+update usuario
+set
+nome="joao",
+email="joao@joao.com.br"
+where
+id=2
+
+
+select * from pessoas
+
+insert into pessoas (nome,idade) values("Rubem",32);
+insert into pessoas (nome,idade) values("Oliota",23);
+insert into pessoas (nome,idade) values("Tester",18);
+insert into pessoas (nome,idade) values("Junin",17);
+insert into pessoas (nome,idade) values("Plenin",20);
+insert into pessoas (nome,idade) values("Senin",25);
+insert into pessoas (nome,idade) values("Master",70);
+
+-- atualizem as idades para 18 de quem termina com n na tabela pessoas
+
+
+update pessoas
+set idade=18
+
+select * from pessoas
+where
+nome like "%n"
+
+
+
+
+
+
+

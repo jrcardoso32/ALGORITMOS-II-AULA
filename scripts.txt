@@ -1,0 +1,122 @@
+
+
+
+
+
+
+
+
+-- para selecionar linhas em uma tabela utilizar o comando SELECT
+--  depois nos nomes das colunas separados por VIRGULA, mas se quiser todos basta colocar *
+-- from + nome da tabela que é o alvo da busca
+
+
+select * from pessoas
+
+-- para inserir dados em uma tabela utilizar o comando "insert into" + nome da tabela 
+-- informar quais colunas deseja preencher e respectivamente os valores apos o comando "values"
+
+select * from pessoas 
+where  
+   idade >=100
+   
+select * from pessoas
+where
+idade >=15
+and id<=80
+---
+
+
+select * from pessoas
+where
+nome like "%joselito%"
+
+select* from pessoas
+where 
+nome like "%o"
+and idade >=45
+
+
+
+
+
+insert into pessoas (nome,idade) values ("zezinho",15)
+
+
+select * from pessoas
+where
+id>=4
+and id<=5
+
+--- delete from
+
+delete from pessoas
+where
+id>=4
+and id<=5
+
+
+-------------------
+
+-- deletar apenas o registro com id  = 1
+-- fazer com segurança sempre
+
+-- delete from pessoas
+-- where
+-- id=1
+
+select * from pessoas
+
+
+
+
+-- criar uma tabela chamada usuarios com os campos
+-- id interer primary key autoincrement unique
+--, nome (texto not null), e-mail (text, not null, senha nota null) e obs text
+
+-----------------------------------------------------------------------------------------
+
+exercicio - CREATE TABLE usuarios (
+    id    INTEGER PRIMARY KEY AUTOINCREMENT
+                  UNIQUE,
+    nome  TEXT    NOT NULL,
+    email TEXT    NOT NULL,
+    senha TEXT    NOT NULL,
+    obs   TEXT
+);
+------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- criar uma tabela chamada usuarios com os campos
+-- id interer primary key autoincrement unique
+--, nome (texto not null), e-mail (text, not null, senha nota null) e obs test
+
+
+-- para criar tabela utilize CREATE TABLE + NOME DA TABELA
+-- DENTRO DOS () INFORMAR CAMPO A CAMPO COM ATRIBUTOS
+-- SEPARAR OS CAMPOS POR VIRGULA
+-- cada campo teu seu nome, tipo, e configurações adicionais
+
+--
+
+    create table usuario (
+    id INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE,
+    nome text not null , 
+    email text not null,
+    senha text not null,
+    obs text
+
+
