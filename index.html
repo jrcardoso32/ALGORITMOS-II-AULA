@@ -1,17 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Orientação a objetos</title>
 </head>
+
 <body>
-    <br>
-  <button onclick="capturaNumeroEspecial('informe um NUMERO')"> pegar numero </button>
-<br>
-<a href="/calculadora.html">exercicio calculadora</a>
-    <script src="/js/funcoes1.js"></script>
-    
+    <a href="/heranca.html"> vai para herança</a>
+    <script>
+        console.log("funcionou");
+        // aluno
+        // idade
+        //matricula
+        // meApresentar ()
+
+        //professor
+        //nome, idade qtde alunos
+        //meApresentar ()
+
+        class aluno {
+            // atributos da classe aluno
+
+            nome
+            idade
+            matricula
+
+            // construtor utilizado no new que recebe os parametros para iniciarlizar os atributos do novo objeto aluno
+            // para cada parametro inicialize o atributo do objeto
+            // o this. e utilizado para identificar que o atributo e do objeto isso ajuda a nao confundir parametro com atributo
+            constructor(nome, idade, matricula) {
+                this.nome = nome
+                this.idade = idade
+                this.matricula = matricula
+            }
+            meApresentar() {
+                return "olá meu nome é " + this.nome + " tenho" + this.idade + "e minha matricula é" + this.matricula
+            }
+
+        }
+       
+        // instanciando um objeto da classe aluno na variavel aluno 1 
+        // passando para o construtor os parametros 
+        let aluno1 = new aluno("osni", 21, "lelelele")
+
+        // criando uma variavel de vetor para armazenar valor do tipo aluno
+        // [] é o operador para listas
+
+
+        let alunos = []
+        //varivavel de lista tipo push é utilizado para inserir um item no final da lista
+        // passando por parametro o item a ser inserido.
+
+        alunos.push(aluno1)
+        // verificando como esta a variavel de lista no momento em log
+        console.log(alunos);
+        // nao precisa criar uma variavel para inserir a variavel na lista
+        // o new devolve o objeto da classe aluno
+        // é como um return, porem o constructor nao precisa informar e retorna um objeto
+        // isso é padrao de orientação a objeto
+
+        alunos.push(new aluno("Osni", 21, "junior123"))
+
+        console.log(alunos);
+        alunos.push(new aluno("teste", 18, "udhudhud"))
+        let aluno2 = (new aluno("aluno ", 22, "aluno 02"))
+
+        alunos.push(aluno2)
+
+        console.log(alunos);
+        // criando uma variavel quie recebe o nome do primeiro aluno na lista de alunos
+        // para acessar uma posição especifica na lista devo informar nos indice[] e isso retorna o valor
+        // que esta nesse indice, como é um onjeto do tipo aluno utilizo (.)para acessar um tributo especifico
+
+        let primeiro_aluno=alunos[0].nome
+        console.log(primeiro_aluno);
+
+        // acessando a idade do segundo aluno na lista aluno e exibindo em log
+        console.log(alunos[1].idade);
+
+// acessando o primeiro aluno e atualizando o valor do atributo nome
+        alunos [0]. nome ="osni (editado)"
+
+
+        // for é um laço de repetição melhor utilizado quando sabemos a qtde de repetições 
+        // com base em um contador
+
+        // 1º uma variavel temporaria com o valor inicial
+        // 2º comparar a variavel temporaria com algum valor que limite a repetição
+        // 3° incremento de quanto em quando o contador mudara de valor
+
+for (let contador=0; contador<alunos.length;contador++)
+
+// acessar o nome do aluno para cada laço de repetição
+
+console.log(alunos[contador].nome);
+
+// percorrer a lista do aluno e moatrar de forma invertida as matriculas
+
+for (let contador=alunos.length; contador>=1;contador--){ // contador ao contrario na ultima posicao ate a primeira
+    console.log(alunos[contador-1].matricula); // imprimindo em tela a matricula com contador em reverse
+
+}
+
+
+
+    </script>
 </body>
+
 </html>
